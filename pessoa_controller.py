@@ -19,11 +19,11 @@ async def obter_pessoas():
 
 pessoas = []
 
-@router.route('/pessoas', methods=['GET'])
+@router.pessoa('/pessoas', methods=['GET'])
 def listar_pessoas():
     return jsonify(pessoas)
 
-@router.route('/pessoas', methods=['POST'])
+@router.pessoa('/pessoas', methods=['POST'])
 def criar_pessoa():
     nova_pessoa = request.json
     pessoas.append(nova_pessoa)
